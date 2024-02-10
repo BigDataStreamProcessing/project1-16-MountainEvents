@@ -1,0 +1,19 @@
+# Katalogi generowane przez IntelliJ IDEA
+# .idea/
+
+# Katalogi wygenerowane podczas kompilacji
+out/
+target/
+
+# Pliki konfiguracyjne
+# *.iml
+*.ipr
+*.iws
+
+# Pliki konfiguracyjne dla różnych narzędzi budowania
+.gradle/
+build/
+
+# Pliki konfiguracyjne dla systemów operacyjnych
+*.DS_Store
+Thumbs.db
