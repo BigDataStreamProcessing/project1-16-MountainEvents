@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="espertech.esper.common" type="repository">
+    <properties maven-id="com.espertech:esper-common:8.8.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/espertech/esper-common/8.8.0/esper-common-8.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

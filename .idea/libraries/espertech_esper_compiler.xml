@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="espertech.esper.compiler" type="repository">
+    <properties maven-id="com.espertech:esper-compiler:8.8.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/espertech/esper-compiler/8.8.0/esper-compiler-8.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/espertech/esper-common/8.8.0/esper-common-8.8.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/janino/janino/3.1.6/janino-3.1.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.9.3/antlr4-runtime-4.9.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/janino/commons-compiler/3.1.6/commons-compiler-3.1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="net.datafaker" type="repository">
+    <properties maven-id="net.datafaker:datafaker:1.4.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/datafaker/datafaker/1.4.0/datafaker-1.4.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
