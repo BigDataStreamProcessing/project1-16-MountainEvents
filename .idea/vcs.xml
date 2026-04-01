@@ -2,5 +2,22 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-01-MinecraftEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-02-JokeEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-03-TrafficEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-04-CarSaleEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-05-WithdrawEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-06-AzureCostEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-07-DonationEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-08-FoodEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-09-TransferEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-10-SubscriptionEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-11-ChessEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-12-PhotoEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-13-PokemonEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-14-FlightEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-15-WitcherEvents" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../project1-17-WarhammerEvents" vcs="Git" />
   </component>
 </project>
