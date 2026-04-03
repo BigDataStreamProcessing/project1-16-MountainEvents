@@ -27,9 +27,9 @@ mają następujące znaczenie:
 
 * `peak_name` - nazwa szczytu
 * `trip_leader` - imię i nazwisko lidera wyprawy (znany alpinista/alpinistka)
-* `result` - opis rezultatu wyprawy (`summit reached`, `base reached`, 
-  `resignation injury`, `resignation weather`, 
-  `resignation someone missing`, `resignation other`)
+* `result` - opis rezultatu wyprawy (`summit-reached`, `base-reached`, 
+`resignation-injury`, `resignation-weather`, 
+`resignation-someone-missing`, `resignation-other`)
 * `amount_people` - liczba osób biorąca udział w wyprawie
 * `ets` - moment zakończenia wyprawy
 * `its` - czas rejestracji faktu zakończenia wyprawy
@@ -49,8 +49,8 @@ FROM MountainEvent#ext_timed(java.sql.Timestamp.valueOf(its).getTime(), 3 sec);
 ```
 
 ## Zadanie 1
-Dla każdego rezultatu wypraw zakończonych sukcesem (`summit reached`,
-`base reached`) utrzymuj liczbę osób dla wypraw zarejestrowanych w ciągu 
+Dla każdego rezultatu wypraw zakończonych sukcesem (`summit-reached`,
+`base-reached`) utrzymuj liczbę osób dla wypraw zarejestrowanych w ciągu 
 ostatnich 10 sekund.
 
 Wyniki powinny zawierać, następujące kolumny:
@@ -59,7 +59,7 @@ Wyniki powinny zawierać, następujące kolumny:
    zdobyć bazę w ciągu ostatnich 10 sekund
 
 ## Zadanie 2
-Wykrywaj przypadki końca wypraw z powodu zaginięcia (`resignation someone missing`), 
+Wykrywaj przypadki końca wypraw z powodu zaginięcia (`resignation-someone-missing`), 
 ogranicz analizę tylko do wypraw, w których brało udział mniej niż 3 osoby.
 
 Wyniki powinny zawierać, następujące kolumny:
@@ -69,7 +69,7 @@ Wyniki powinny zawierać, następujące kolumny:
 - `amount_people` - liczba osób biorąca udział w wyprawie
 
 ## Zadanie 3
-Analizując jedynie wyprawy zakończone z powodu zaginięcia (`resignation someone missing`), 
+Analizując jedynie wyprawy zakończone z powodu zaginięcia (`resignation-someone-missing`), 
 wykrywaj takie, w których liczba osób jest największa z ostatnich 20. wypraw.
 
 Wyniki powinny zawierać, następujące kolumny:
@@ -91,8 +91,8 @@ Wyniki powinny zawierać, następujące kolumny:
 
 ## Zadanie 5
 Wykrywaj serię nie dłuższą niż 5 sekund i składającą się z co 
-najmniej 3 kolejnych wypraw zakończonych sukcesem (`summit reached`, 
-`base reached`), po której to serii miała miejsce wyprawa o efekcie 
+najmniej 3 kolejnych wypraw zakończonych sukcesem (`summit-reached`, 
+`base-reached`), po której to serii miała miejsce wyprawa o efekcie 
 innym niż sukces.
 
 W wynikach umieść informacje dotyczące trzech pierwszych wypraw.
@@ -113,7 +113,7 @@ Zadbaj o to, aby wszystkie trzy wyprawy były bezpośrednio
 następującymi po sobie wyprawami tego samego lidera
 (pomiędzy nimi nie może pojawić się wyprawa innego lidera).
 
-Wyprawa zakończona sukcesem jest typu `summit reached` lub `base reached`.
+Wyprawa zakończona sukcesem jest typu `summit-reached` lub `base-reached`.
 Pozostałe typy rezultatu wyprawy traktowane są jako porażka.
 
 Wyniki powinny zawierać, następujące kolumny:
@@ -126,7 +126,7 @@ Wyniki powinny zawierać, następujące kolumny:
 Dla każdego lidera wykrywaj takie wyprawy, że:
   - (a) - pierwsza wyprawa się nie udała
   - (b) - od 3 do 5 kolejnych wypraw zakończyło się sukcesem 
-     (`summit reached`, `base reached`) i w każdej z nich brało 
+     (`summit-reached`, `base-reached`) i w każdej z nich brało 
       udział mniej osób niż w wyprawie (a)
   - (c) - ostatnia wyprawa zakończyła się porażką lub brało w niej 
       udział nie mniej osób niż w wyprawie (a)
