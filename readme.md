@@ -27,8 +27,8 @@ mają następujące znaczenie:
 
 * `peak_name` - nazwa szczytu
 * `trip_leader` - imię i nazwisko lidera wyprawy (znany alpinista/alpinistka)
-* `result` - opis rezultatu wyprawy (`summit-reached`, `base-reached`, 
-`resignation-injury`, `resignation-weather`, 
+* `result` - opis rezultatu wyprawy (sukces: `summit-reached`, `base-reached`; 
+porażka: `resignation-injury`, `resignation-weather`, 
 `resignation-someone-missing`, `resignation-other`)
 * `amount_people` - liczba osób biorąca udział w wyprawie
 * `ets` - moment zakończenia wyprawy
@@ -59,7 +59,8 @@ Wyniki powinny zawierać, następujące kolumny:
    zdobyć bazę w ciągu ostatnich 10 sekund
 
 ## Zadanie 2
-Wykrywaj przypadki końca wypraw z powodu zaginięcia (`resignation-someone-missing`), 
+Wykrywaj przypadki rejestracji wypraw zakończonych z powodu zaginięcia 
+(`resignation-someone-missing`), 
 ogranicz analizę tylko do wypraw, w których brało udział mniej niż 3 osoby.
 
 Wyniki powinny zawierać, następujące kolumny:
@@ -69,8 +70,10 @@ Wyniki powinny zawierać, następujące kolumny:
 - `amount_people` - liczba osób biorąca udział w wyprawie
 
 ## Zadanie 3
-Analizując jedynie wyprawy zakończone z powodu zaginięcia (`resignation-someone-missing`), 
-wykrywaj takie, w których liczba osób jest największa z ostatnich 20. wypraw.
+Analizując jedynie wyprawy zarejestrowane jako zakończone z powodu 
+zaginięcia (`resignation-someone-missing`), 
+wykrywaj takie, w których liczba osób jest największa z ostatnich 20. 
+tego typu wypraw.
 
 Wyniki powinny zawierać, następujące kolumny:
 - `peak_name` - nazwa szczytu
@@ -81,8 +84,8 @@ Wyniki powinny zawierać, następujące kolumny:
 - `its` - czas rejestracji faktu zakończenia wyprawy
 
 ## Zadanie 4
-Dla każdych kolejnych 5 sekund wyznaczana jest lista z nazwami 
-10 szczytów, które były celem największej liczby wypraw. 
+Dla każdych kolejnych 5 sekund rejestracji wyznaczana jest 
+lista z nazwami 10 szczytów, które były celem największej liczby wypraw. 
 Znajduj nazwy takich szczytów, które zostały usunięte z powyższej listy. 
 
 Wyniki powinny zawierać, następujące kolumny:
@@ -90,12 +93,14 @@ Wyniki powinny zawierać, następujące kolumny:
 - `how_many` - liczba wypraw, jaka miała na celu szczyt przed jego usunięciem z listy
 
 ## Zadanie 5
-Wykrywaj serię nie dłuższą niż 5 sekund i składającą się z co 
-najmniej 3 kolejnych wypraw zakończonych sukcesem (`summit-reached`, 
-`base-reached`), po której to serii miała miejsce wyprawa o efekcie 
-innym niż sukces.
+Wykrywaj serie rejestracji wypraw nie dłuższe niż 5 sekund 
+(czas pomiędzy rejestracją pierwszej wyprawy z serii rejestracją ostatniej wyprawy z serii) 
+i składającą się z co najmniej 3 kolejnych wypraw 
+zakończonych sukcesem (`summit-reached`, `base-reached`) bezpośrednio 
+przed rejestracją wyprawy o efekcie innym niż sukces.
 
-W wynikach umieść informacje dotyczące trzech pierwszych wypraw.
+W wynikach umieść informacje dotyczące trzech pierwszych wypraw 
+z serii zakończonej sukcesem.
 
 Wyniki powinny zawierać, następujące kolumny:
 - `result_1` - rezultat pierwszej wyprawy w serii
@@ -107,11 +112,10 @@ Wyniki powinny zawierać, następujące kolumny:
 
 
 ## Zadanie 6
-Wykrywaj przypadki liderów wypraw, których kolejne wyprawy zakończyły 
-się trzykrotnie niepowodzeniem lub trzykrotnie powodzeniem.
-Zadbaj o to, aby wszystkie trzy wyprawy były bezpośrednio
-następującymi po sobie wyprawami tego samego lidera
-(pomiędzy nimi nie może pojawić się wyprawa innego lidera).
+Wyszukuj serie bezpośrednio po sobie następujących rejestracji 
+trzech wypraw posiadających tego samego lidera. 
+Wszystkie wyprawy w serii muszą być zakończone 
+albo trzykrotnie porażką albo trzykrotnie powodzeniem.
 
 Wyprawa zakończona sukcesem jest typu `summit-reached` lub `base-reached`.
 Pozostałe typy rezultatu wyprawy traktowane są jako porażka.
@@ -123,7 +127,9 @@ Wyniki powinny zawierać, następujące kolumny:
 - `result_3` - rezultat trzeciej wyprawy 
 
 ## Zadanie 7
-Dla każdego lidera wykrywaj takie wyprawy, że:
+Analizując rejestracje wypraw dla każdego lidera niezależnie, 
+wykrywaj rejestracje następujących
+bezpośrednio po sobie takich wypraw, że:
   - (a) - pierwsza wyprawa się nie udała
   - (b) - od 3 do 5 kolejnych wypraw zakończyło się sukcesem 
      (`summit-reached`, `base-reached`) i w każdej z nich brało 
